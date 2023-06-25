@@ -22,7 +22,7 @@ FROM base as build
 
 # Install packages needed to build gems
 RUN apt-get update -qq && \
-    apt-get install --no-install-recommends -y build-essential pkg-config
+    apt-get install --no-install-recommends -y build-essential libpq-dev pkg-config redis-tools
 
 # Install application gems
 COPY --link Gemfile Gemfile.lock ./
@@ -67,5 +67,4 @@ ENV RAILS_LOG_TO_STDOUT="1" \
 
 # Start the server by default, this can be overwritten at runtime
 EXPOSE 3000
-VOLUME /data
 CMD ["bundle", "exec", "sidekiq", "-C", "/rails/config/sidekiq_worker.yml"]
