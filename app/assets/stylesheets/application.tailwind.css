@@ -53,3 +53,7 @@
 .hidden {
   display: none;
 }
+
+#status {
+  color: #fff;
+}

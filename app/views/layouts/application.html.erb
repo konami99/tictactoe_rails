@@ -9,8 +9,15 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <%= javascript_importmap_tags %>
+    <style>
+      body {
+        background-image: url('<%= asset_path("background.jpeg") %>');
+        background-repeat: repeat;
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
   </head>
-
   <body>
     <main class="container mx-auto mt-28 px-5 flex justify-center">
       <%= yield %>
