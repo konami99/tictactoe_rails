@@ -13,6 +13,6 @@ Rails.application.routes.draw do
   get '/tictactoeboards/index', to: 'tictactoeboards#index'
   get '/tictactoeboards/join', to: 'tictactoeboards#join'
   post '/tictactoeboards/join_team', to: 'tictactoeboards#join_team'
-  # root "tictactoeboards#index"
-  root "rails/welcome#index"
+  root "tictactoeboards#index"
+  # root "rails/welcome#index"
 end
