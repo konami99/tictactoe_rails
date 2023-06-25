@@ -1,0 +1,5 @@
+<%= form_tag('/tictactoeboards/join_team', method: :post) do %>
+  <p>Enter a channel code</p>
+  <input type="text" name="channel"></input>
+  <%= submit_tag "Join", class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" %>
+<% end %>

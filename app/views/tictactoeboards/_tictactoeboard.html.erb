@@ -1,0 +1,16 @@
+<%= turbo_frame_tag tictactoeboard do %>
+  <div id="winner" class="hidden"><%= tictactoeboard&.winner %></div>
+  <div id="next" class="hidden"><%= tictactoeboard&.whose_turn_next %></div>
+  <div id="status" class="flash-border mb-4"><% if @tictactoeboard&.whose_turn_next.nil? %>Winner :<%= @tictactoeboard&.winner %><% elsif cookies[:player_1] && !tictactoeboard&.player_2 %>Waiting for player 2 to join<% elsif (cookies[:player_1] && @tictactoeboard&.whose_turn_next == 'player_2') || (cookies[:player_2] && @tictactoeboard&.whose_turn_next == 'player_1') %>Status: another player's turn<% else %>Status: your turn<% end %></div>
+  <div class="board my-0 mx-auto" data-controller="tictactoe">
+    <div id="cell_1" class="cell <% if tictactoeboard.cell_1 == 'circle' %>circle<% elsif tictactoeboard.cell_1 == 'cross' %>cross<% end %>" data-action="click->tictactoe#click"></div>
+    <div id="cell_2" class="cell <% if tictactoeboard.cell_2 == 'circle' %>circle<% elsif tictactoeboard.cell_2 == 'cross' %>cross<% end %>" data-action="click->tictactoe#click"></div>
+    <div id="cell_3" class="cell <% if tictactoeboard.cell_3 == 'circle' %>circle<% elsif tictactoeboard.cell_3 == 'cross' %>cross<% end %>" data-action="click->tictactoe#click"></div>
+    <div id="cell_4" class="cell <% if tictactoeboard.cell_4 == 'circle' %>circle<% elsif tictactoeboard.cell_4 == 'cross' %>cross<% end %>" data-action="click->tictactoe#click"></div>
+    <div id="cell_5" class="cell <% if tictactoeboard.cell_5 == 'circle' %>circle<% elsif tictactoeboard.cell_5 == 'cross' %>cross<% end %>" data-action="click->tictactoe#click"></div>
+    <div id="cell_6" class="cell <% if tictactoeboard.cell_6 == 'circle' %>circle<% elsif tictactoeboard.cell_6 == 'cross' %>cross<% end %>" data-action="click->tictactoe#click"></div>
+    <div id="cell_7" class="cell <% if tictactoeboard.cell_7 == 'circle' %>circle<% elsif tictactoeboard.cell_7 == 'cross' %>cross<% end %>" data-action="click->tictactoe#click"></div>
+    <div id="cell_8" class="cell <% if tictactoeboard.cell_8 == 'circle' %>circle<% elsif tictactoeboard.cell_8 == 'cross' %>cross<% end %>" data-action="click->tictactoe#click"></div>
+    <div id="cell_9" class="cell <% if tictactoeboard.cell_9 == 'circle' %>circle<% elsif tictactoeboard.cell_9 == 'cross' %>cross<% end %>" data-action="click->tictactoe#click"></div>
+  </div>
+<% end %>

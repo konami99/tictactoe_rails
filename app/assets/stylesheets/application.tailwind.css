@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+
+@layer components {
+  .btn-primary {
+    @apply py-2 px-4 bg-blue-200;
+  }
+}
+
+*/
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  width: 300px;
+  height: 300px;
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  cursor: pointer;
+}
+
+.circle::after {
+  content: "O";
+}
+
+.cross::after {
+  content: "X";
+}
+
+@keyframes flash {
+  0% { border-color: transparent; }
+  50% { border-color: red; }
+  100% { border-color: transparent; }
+}
+
+.flash-border {
+  animation: flash 3s infinite;
+  border: 1px solid;
+}
+
+.hidden {
+  display: none;
+}
