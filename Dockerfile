@@ -64,7 +64,7 @@ ENV DATABASE_URL="sqlite3:///data/production.sqlite3" \
     RAILS_SERVE_STATIC_FILES="true"
 
 # Entrypoint prepares the database.
-ENTRYPOINT ["/rails/bin/docker-entrypoint"]
+# ENTRYPOINT ["/rails/bin/docker-entrypoint"]
 
 # Start the server by default, this can be overwritten at runtime
 EXPOSE 3000
