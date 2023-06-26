@@ -54,6 +54,7 @@
   display: none;
 }
 
-#status {
+#status,
+#channel-code {
   color: #fff;
 }

@@ -23,7 +23,7 @@
 				</div>
 			<% end %>
 			<% if cookies[:player_1] %>
-				<div>Your channel code: <%= @channel %></div>
+				<div id="channel-code">Your channel code: <%= @channel %></div>
 			<% elsif cookies[:player_2] %>
 				<div>You are in a game (<%= @channel %>)</div>
 			<% end %>
