@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
+  get 'tls_check', to: 'tls_check#check'
+
   post '/tictactoeboards/click', to: 'tictactoeboards#click'
   post '/tictactoeboards/reset', to: 'tictactoeboards#reset'
   post '/tictactoeboards/leave', to: 'tictactoeboards#leave'
