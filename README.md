@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Tic-tac-toe written in Rails and Hotwire.
 
-Things you may want to cover:
+https://github.com/konami99/tictactoe_rails/assets/166879/77fc4832-70e3-4470-b700-acfbb554065c
 
-* Ruby version
+# Setup
+Needs to have Postgres and Redis installed.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+bundle install
+rails db:setup
+rails tailwindcss:build
+rails s
+```
